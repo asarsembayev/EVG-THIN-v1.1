@@ -1,0 +1,68 @@
+Compiling evg-thin.cc
+Compiling test.cc
+In file included from fileio.hh:30:0,
+                 from test.cc:30:
+ImageHelper.hh: In member function ‘void ImageHelper::setup(int, int, int, unsigned char*)’:
+ImageHelper.hh:47:34: error: ‘memcpy’ was not declared in this scope
+       memcpy(_buffer,buffer,_size);
+                                  ^
+ImageHelper.hh: In member function ‘int ImageHelper::readpnm(const char*, int&, int&, int&, unsigned char*&)’:
+ImageHelper.hh:71:9: error: ‘exit’ was not declared in this scope
+  exit(-1);
+         ^
+ImageHelper.hh:78:9: error: ‘exit’ was not declared in this scope
+  exit(-1);
+         ^
+ImageHelper.hh:89:9: error: ‘exit’ was not declared in this scope
+  exit(-1);
+         ^
+ImageHelper.hh: In constructor ‘ImageHelper::ImageHelper(const char*)’:
+ImageHelper.hh:135:14: error: ‘exit’ was not declared in this scope
+       exit(-1);
+              ^
+ImageHelper.hh: In member function ‘void ImageHelper::greyscale()’:
+ImageHelper.hh:176:40: warning: narrowing conversion of ‘maxx’ from ‘int’ to ‘unsigned char’ inside { } is ill-formed in C++11 [-Wnarrowing]
+  unsigned char maxxx[3]={maxx,maxx,maxx};
+                                        ^
+ImageHelper.hh:176:40: warning: narrowing conversion of ‘maxx’ from ‘int’ to ‘unsigned char’ inside { } is ill-formed in C++11 [-Wnarrowing]
+ImageHelper.hh:176:40: warning: narrowing conversion of ‘maxx’ from ‘int’ to ‘unsigned char’ inside { } is ill-formed in C++11 [-Wnarrowing]
+test.cc: In function ‘void parse_params(int, char**)’:
+test.cc:55:31: error: ‘strcmp’ was not declared in this scope
+     if (0==strcmp(argv[i],"-?")) {
+                               ^
+test.cc: In function ‘int main(int, char**)’:
+test.cc:160:36: error: ‘strcspn’ was not declared in this scope
+     int delim=strcspn(imagefile,".");
+                                    ^
+test.cc:162:36: error: ‘strncpy’ was not declared in this scope
+     strncpy(outfile,imagefile,delim);
+                                    ^
+test.cc:164:35: error: ‘strcat’ was not declared in this scope
+     strcat(outfile,"_skeleton.ppm");
+                                   ^
+In file included from fileio.hh:30:0,
+                 from test.cc:30:
+ImageHelper.hh: In member function ‘int ImageHelper::readpnm(const char*, int&, int&, int&, unsigned char*&)’:
+ImageHelper.hh:74:22: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+     fscanf (f,"%s",s);
+                      ^
+ImageHelper.hh:93:34: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+     fscanf(f,"%d%c",&max_color,s);
+                                  ^
+ImageHelper.hh:96:31: warning: ignoring return value of ‘size_t fread(void*, size_t, size_t, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+     fread(buffer, 1 , size, f);    
+                               ^
+ImageHelper.hh: In member function ‘void ImageHelper::scan_comment(FILE*)’:
+ImageHelper.hh:54:22: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+     fscanf( f,"%c",s);
+                      ^
+ImageHelper.hh:55:22: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+     fscanf( f,"%c",s);
+                      ^
+ImageHelper.hh:58:19: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+  fscanf( f,"%c",s);
+                   ^
+ImageHelper.hh:60:24: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+       fscanf( f,"%c",s);
+                        ^
+make: *** [test.o] Error 1

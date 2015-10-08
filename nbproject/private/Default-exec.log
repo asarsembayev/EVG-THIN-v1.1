@@ -1,0 +1,22 @@
+called: g++
+	/home/aidos/Downloads/evg-thin
+	g++
+	-Wall
+	-O2
+	-MD
+	-c
+	-o
+	evg-thin.o
+	evg-thin.cc
+
+called: g++
+	/home/aidos/Downloads/evg-thin
+	g++
+	-Wall
+	-O2
+	-MD
+	-c
+	-o
+	test.o
+	test.cc
+
